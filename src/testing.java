@@ -392,7 +392,7 @@ public class testing {
 							}
 					} else if (emp.JobName() == "M") {
 						try {
-							System.out.println("Sto chiamando Merge");
+							System.out.println("Calling Merge");
 							Merge Merge = new Merge();
 							Merge.Merge(emp.getFileName());
 

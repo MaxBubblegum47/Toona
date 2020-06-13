@@ -165,6 +165,7 @@ public class Merge {
 
 		} else {
 			File into = new File(completeDir + File.separator + ff.substring(0, ff.lastIndexOf('p')));
+			System.out.println("Compelte Dir: " + completeDir);
 			TalkingTerminal(null, list); // 6
 			mergeFiles(list, into);
 		}
@@ -209,7 +210,7 @@ public class Merge {
 			for (File f : files) {
 				Boolean gg = f.isFile();
 				Path temp = f.toPath();
-				System.out.println("Path usedduring mergingstream " + temp + " " + gg);
+				System.out.println("Path used during mergingstream " + temp + " " + gg);
 				Files.copy(temp, mergingStream);
 				System.out.println("Delete this trash: " + f.toString());
 			}
@@ -226,7 +227,6 @@ public class Merge {
 	 *                     failed or interrupted I/O operations.
 	 */
 	public void Bidone(List<File> files) throws IOException {
-		System.out.println("Delete: ");
 		for (int i = 0; i < files.size(); i++) {
 			System.out.println(files.get(i));
 			files.get(i).delete();
