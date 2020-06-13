@@ -227,10 +227,18 @@ public class Merge {
 	 *                     failed or interrupted I/O operations.
 	 */
 	public void Bidone(List<File> files) throws IOException {
+		String trash = System.getProperty("user.dir") + File.separator +files.get(0).getName();
+		System.out.println("Fijo bastardo " + trash);
+		File cestina = new File(trash);
+		if (cestina.exists()){		
+			cestina.delete();
+		}
+		
 		for (int i = 0; i < files.size(); i++) {
 			System.out.println(files.get(i));
 			files.get(i).delete();
 		}
+		
 	}
 
 	/**
@@ -264,6 +272,8 @@ public class Merge {
 	}
 
 	public void TalkingTerminal(String merged, List lista) {
+		System.out.println(System.getProperty("user.dir"));
+		
 		if (merged != null) {
 			System.out.println("Chosen File to Merge: " + merged);
 		}
