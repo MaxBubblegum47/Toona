@@ -27,8 +27,6 @@ import javax.swing.filechooser.FileSystemView;
  * @author Lorenzo
  */
 public class Merge {
-	private final int BUFFER_SIZE = 4096;
-
 	/**
 	 * Merge Method called from testing.java that performs Merge Button in gui
 	 * merging all selected files
