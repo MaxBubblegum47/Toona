@@ -167,8 +167,7 @@ public class testing {
 		parter.setModel(new SpinnerNumberModel(new Integer(1), new Integer(1), null, new Integer(1)));
 		parter.setBounds(47, 99, 37, 20);
 		frame.getContentPane().add(parter);
-		System.out.println("Stampa : " + CustomSize.isSelected());
-		
+				
 
 		SplitButton = new JButton("Split");
 		SplitButton.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 17));
